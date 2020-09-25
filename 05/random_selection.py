@@ -10,14 +10,15 @@ KREWES = {
 def get_team_name(dic: dict) -> str:
     team_name = input(
         "Please enter the name of the team you'd like to select a member from: ").lower()
-    while team_name not in dic.keys():
+    while team_name not in dic.keys():  # ensures team name provided exists
+        # ensures we don't encounter a keyError
         team_name = input("Please enter a valid team name: ").lower()
     return team_name
 
 
 def get_team_member(dic: dict, team_name: str) -> str:
     team_members = dic[team_name]
-    index = r(0, len(team_members) - 1)
+    index = r(0, len(team_members) - 1)  # selects random member
     return team_members[index]
 
 
@@ -25,7 +26,6 @@ def main():
     team_name = get_team_name(KREWES)
     team_member = get_team_member(KREWES, team_name)
     print(f"Team member {team_member} chosen from team {team_name}.")
-    return 0
 
 
 main()
