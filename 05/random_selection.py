@@ -1,3 +1,8 @@
+# Ethan Shenker, Alvin Wu, Willian Yin
+# SoftDev
+# K05 -- Random Team Member Selector
+# 2020-09-05
+
 from random import randint as r
 
 KREWES = {
@@ -10,7 +15,7 @@ KREWES = {
 def get_team_name(dic: dict) -> str:
     team_name = input(
         "Please enter the name of the team you'd like to select a member from: ").lower()
-    while team_name not in dic.keys():  # ensures team name provided exists
+    while team_name not in dic:  # ensures team name provided exists
         # ensures we don't encounter a keyError
         team_name = input("Please enter a valid team name: ").lower()
     return team_name
