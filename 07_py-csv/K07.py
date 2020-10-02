@@ -19,4 +19,4 @@ with open("occupations.csv") as file:  # open the file
 
 file.close()
 
-print(c(jobs[:-1], weights=weights[:-1]))
+print(f"Job selected: {c(jobs[:-1], weights=weights[:-1])[0]}.")
