@@ -4,11 +4,11 @@
 # 2020-09-30
 # requires python3.8
 
-import csv
+from csv import DictReader
 from random import choices as c
 
 with open("occupations.csv") as file:  # open the file
-    reader = csv.DictReader(file)
+    reader = DictReader(file)
 
     jobs = []
     weights = []
