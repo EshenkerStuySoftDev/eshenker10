@@ -1,4 +1,4 @@
-# Ethan Shenker,
+# Ethan Shenker, Dean Carey, Ethan Machleder
 # SoftDev
 # K06 -- Random Team Member Selector (but better)
 # 2020-09-30
