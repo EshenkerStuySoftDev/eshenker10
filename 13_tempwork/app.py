@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return render_template("occupations.html", title="Occupations", occ=select(), table=get_table())
+    return render_template("tablified.html", title="Occupations", occ=select(), table=get_table())
 
 
 if __name__ == "__main__":
