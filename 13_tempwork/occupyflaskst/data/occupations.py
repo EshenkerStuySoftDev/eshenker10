@@ -1,4 +1,4 @@
-# Team Hairy Owls(Ethan Shenker, Arib Chowdhury, Jon Lee)
+# Team Hairy Owls(Ethan Shenker, Arib Chowdhury, Jonathan Lee)
 # SoftDev
 # K13 - - Template for Success
 # 2020-10-15
@@ -7,8 +7,11 @@ from csv import DictReader
 from random import choices as c
 
 
-def select(file: str) -> str:
-    with open(file) as file:  # open the file
+our_file = "data/occupations.csv"
+
+
+def select() -> str:
+    with open(our_file) as file:  # open the file
         reader = DictReader(file)
 
         jobs = []
@@ -24,19 +27,18 @@ def select(file: str) -> str:
     return c(jobs[:-1], weights=weights[:-1])[0]
 
 
-def get_occs_list(file: str) -> list:
-    with open(file) as file:
+def get_table() -> dict:
+    output = []
+    with open(our_file) as file:
         reader = DictReader(file)
 
-        jobs = []
-
         for row in reader:
-            jobs.append(row["Job Class"])
-    file.close()
+            output.append(dict(row))
 
-    return jobs[:-1]
+    file.close()
+    return output[:-1]
 
 
 if __name__ == "__main__":
-    print(select("occupations.csv"))
-    print(get_occs_list('occupations.csv'))
+    print(select())
+    print(get_table())
