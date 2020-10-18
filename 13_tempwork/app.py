@@ -4,7 +4,7 @@
 # 2020-10-15
 
 from flask import Flask, render_template
-from data.occupations import select, get_table
+from occupations import select, get_table
 
 app = Flask(__name__)
 
