@@ -1,3 +1,8 @@
+Ethan Shenker
+SoftDev
+LJ00 -- Mongo Pt. 1
+2020-10-27
+
 What is MongoDB?
     - structured way to store and access day
     - NoSQL, not relational
