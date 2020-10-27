@@ -1,0 +1,29 @@
+What is MongoDB?
+    - structured way to store and access day
+    - NoSQL, not relational
+        - NoSQL, documentDB
+        - stored in collections
+
+What is a Document?
+    - Way to organize and store data as a set of field-value pairs
+    - EX:
+        {
+            <field> : <value>,
+            <field> : <value>,
+            "name"  : "Ethan",
+            "title" : "Team Lead",
+            "age"   : "17"
+        }
+
+    - Collection contains many documents, database contains many collections
+
+Atlas
+    - Database as a service
+        - visualize, analyze, export, and build apps w/ data
+    - Clusters
+        - groups of servers that store data
+        - configured in replica set
+            - few connected machines that store the same data, adds protection and loss prevention
+        - instances
+            - single machine that stores data
+    - Atlas manages cluster creation, maintanance of database deployment
