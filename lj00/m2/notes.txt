@@ -14,4 +14,57 @@ Documents:
 
     BSON - Binary JSON, how Mongo stores data
     
+Import and Export Data:
+    ("URI" -- > Uniform Resource Identifier)
+    JSON Commands:
+        (Import)
+        mongoimport --uri "<Atlas Cluster URI>"
+                    --drop=<filename>.json
+
+        (Export)
+        mongoexport --uri "<Atlas Cluster URI>"
+    BSON Commands:
+        (Import)
+        mongostore --uri "<Atlas Cluster URI>"
+                   --drop dump
+
+        (Export)
+        mongodump --uri "<Atlas Cluster URI>"
+                  --collection=<collection name>
+                  --out=<filename>.json
+
+    Link Format:
+        mongodb+srv://user:password@cluterURI.mongodb.net/database
+
+
+Data Explorer:
+    Atlas Uniform
+    Uses JSON queries --> {"filter":"example"}
+                          {"variable":"value", "variable":"value"}
+
+Queries through Shell:
+    Connect:
+        from mongo shell:
+            "mongodb+srv://user:password@clusterURI.mongodb.net/admin"
+            administrative DB
+    find() command
+
+    show db:
+        shows list of databases in current cluter
+
+    use <databaseName>:
+        assigns "db" object to reference that particular databaseName
+        allows us to interact with interact
     
+    show collections:
+        lists out all collections in db which "db" points to
+
+    query:
+        db.<collectionName>.find( {"variable":"value"} )
+        "it" --> iterate, allows us to iterate through a cursor
+        cursor --> pointer to a result set in the query
+
+        find.count() --> returns number of documents that match the given query
+        find.pretty() --> returns query in JSON format
+        find({}) --> returns first 20 docs in collection (any order)
+        
