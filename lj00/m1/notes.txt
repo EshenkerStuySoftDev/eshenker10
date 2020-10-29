@@ -1,34 +1,19 @@
 Ethan Shenker
 SoftDev
-LJ00 -- Mongo Pt. 1
+KLJ00 -- Le Voyage de Learnination avec Mongo, Première Phase
 2020-10-27
 
-What is MongoDB?
-    - structured way to store and access day
-    - NoSQL, not relational
-        - NoSQL, documentDB
-        - stored in collections
-
-What is a Document?
-    - Way to organize and store data as a set of field-value pairs
-    - EX:
-        {
-            <field> : <value>,
-            <field> : <value>,
-            "name"  : "Ethan",
-            "title" : "Team Lead",
-            "age"   : "17"
-        }
-
-    - Collection contains many documents, database contains many collections
-
-Atlas
-    - Database as a service
-        - visualize, analyze, export, and build apps w/ data
-    - Clusters
-        - groups of servers that store data
-        - configured in replica set
-            - few connected machines that store the same data, adds protection and loss prevention
-        - instances
-            - single machine that stores data
-    - Atlas manages cluster creation, maintanance of database deployment
+MongoDB is a NoSQL database, doesn't store data in tables, instead puts data in documents (Its a NoSQL DocumentDB)
+Documents store data as field, value pairs
+Collection stores many documents
+Database stores many collections
+Atlas is a cloud database with MongoDB at its core for data storage and retrieval
+Atlas users can deploy clusters which are groups of servers that store your data and are linked as a replica set.
+Replica Sets are connected MongoDB instances storing the same data
+Instance is a single machine locally or in the cloud, running a certain software
+Replica Set helps to keep backups unless anything goes wrong with one of the instances
+Atlas:
+ -Manages cluster creation
+ -Runs and maintains database employment
+ -Uses cloud service provider of your choice
+ -Experiments with new tools and features
