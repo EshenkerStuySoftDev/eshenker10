@@ -1,0 +1,10 @@
+Team MechKB
+Ethan Shenker, Saqif Abedin
+K18 - Filler and Finery
+2021-1-13
+
+
+We spent quite some time struggling with a div issue, which we realized
+was caused due to an outer div tag not being closed properly. We also 
+experimented with padding, margins, and borders, and realized that there's
+still a lot left to learn. 
