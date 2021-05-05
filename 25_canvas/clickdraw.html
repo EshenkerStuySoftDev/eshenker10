@@ -1,0 +1,44 @@
+<!--
+    Team Portal: Saqif Abedin & Ethan Shenker
+    SoftDev pd1
+    K25 -- I See a Red Door...
+    2021-05-04
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <script src="clickdraw.js"></script>
+    </head>
+
+    <style>
+        #slate {border: 1px solid black }
+    </style>
+
+    <h1> Bonjour  monde! </h1>
+    <h2> Demo </h2>
+
+    <div>
+
+        <h2 id="label"> Drawing Mode: Rectangle </h2>
+        <canvas height="600" width="600" id="slate">
+            Alt Text~~
+        </canvas>
+
+        <script>
+        document.getElementById("slate").addEventListener("click", e => {
+            x = e.offsetX // distance mouse has travelled from left of canvas
+            y = e.offsetY // distance mouse has travelled from top of canvas
+            draw(x, y)
+        })
+        </script>
+        <!--when page is loaded, event listener is automatically added to DOM, gets x/y and calls draw function all on click.-->
+
+        <button onclick="clearCanvas()"> Clear </button>
+        <button onclick="toggle()"> Toggle (Dot Mode vs Box Mode) </button>
+
+    </div>
+
+</html>
