@@ -1,8 +1,8 @@
 /*
     Team Portal: Saqif Abedin & Ethan Shenker
     SoftDev pd1
-    K25 -- I See a Red Door...
-    2021-05-04
+    K26 -- They lock us in the tower whenever we get caught
+    2021-05-07
 */
 
 // model for HTML5 canvas-based animation
