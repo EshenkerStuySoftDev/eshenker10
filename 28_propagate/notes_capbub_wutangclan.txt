@@ -1,0 +1,43 @@
+Team Gies: Ethan Shenker / Ishita Gupta
+SoftDev pd1
+K28 - Bubble Bubble Toil Trouble
+2021-05-12
+
+Demo #1
+    Predictions:
+        - Every time a user clicks on a cell, there will be a pop-up window containing the text of that cell
+    Observations:
+        - We were correct
+
+Demo #2
+    Predictions:
+        - Every time a user clicks on a cell, there will be a pop-up window containing the text of that cell and values of the entire row separated by commas
+        - We're not sure in which order the alerts will appear
+    Observations:
+        - First the user gets an alert containing the cell name, then the html code for the entire row, then the code for the entire table
+        - Every time the user clicks 'ok' on the alert, the next one pops on
+
+Demo #3
+    Predictions:
+        - After the propagation line is uncommented, nothing will occur upon a user clicking anywhere on the table
+    Observations:
+        - The alert containing the html code for the entire table pops up
+    Notes:
+        - Event Capturing is building a stack of elements from the outermost tags to the inner desired tag
+        - Event Bubbling is running a function on an element and then working up the capture stack 
+        - Propagation: bubbling up to parent elements or down to child elements (cr: w3schools.com)
+        - stopPropagation: stops both the bubbling and capturing phases (stop any movement forward)
+        - useCapture: if the value is set to true, then the function is executed during the capturing phase
+        - useCapture: if the value is set to false, then the function is executed during the bubbling phase
+        
+        - When a user clicks on the table, the code registers that click and because of the stop propagation function, does not continue traversing the stack. However because useCapture is true, functions are executed during the capture stage, so the function for the table still gets carried out.
+
+Demo #4
+    Predictions:
+        - Order would not matter
+        - When the line is uncommented, only the table alert will pop up
+    Observations:
+        - When the line is commented: The alert first contains the html code for the table, then the row, then the cell
+        - When the line is uncommented: Only the table alert will pop up
+    Notes:
+        - Propagation never reaches the children of the table, so even though useCapture is set to true, the elements do not exist in the stack and the functions cannot be executed
